@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Drag and drop dynamic form</title>
+  </head>
+  <body>
+    <div style="text-align: center; margin-top: 30px">
+      <h1>Dynamic Form Builder</h1>
+    </div>
+    <div class="contain">
+      <div id="elements" class="elements">
+        <div
+          class="list"
+          draggable="true"
+          ondragstart="dragstart(event, 'text' , 'name', 'true')"
+        >
+          <label>Name</label>
+        </div>
+        <div
+          class="list"
+          draggable="true"
+          ondragstart="dragstart(event, 'email', 'email')"
+        >
+          <label>Email</label>
+        </div>
+        <div
+          class="list"
+          draggable="true"
+          ondragstart="dragstart(event, 'password', 'password')"
+        >
+          <label>Password</label>
+        </div>
+        <div
+          class="list"
+          draggable="true"
+          ondragstart="dragstart(event, 'tel', 'phone')"
+        >
+          <label>Phone</label>
+        </div>
+        <div
+          class="list"
+          draggable="true"
+          ondragstart="dragstart(event, 'number', 'number')"
+        >
+          <label>number</label>
+        </div>
+        <div
+          class="list"
+          draggable="true"
+          ondragstart="dragstart(event, 'color', 'color')"
+        >
+          <label>color</label>
+        </div>
+        <div
+          class="list"
+          draggable="true"
+          ondragstart="dragstart(event, 'file', 'file')"
+        >
+          <label>file</label>
+        </div>
+        <div
+          class="list"
+          draggable="true"
+          ondragstart="dragstart(event, 'range', 'range')"
+        >
+          <label>range</label>
+        </div>
+      </div>
+      <div
+        id="form"
+        class="form"
+        ondrop="drop(event)"
+        ondragover="dragover(event)"
+      ></div>
+    </div>
+    <div class="contain" onclick="submit()">
+      <button class="subbtn">submit</button>
+    </div>
+    <div class="retrive"><div id="retrive" class="innerdiv"></div></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
